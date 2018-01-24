@@ -1,0 +1,7 @@
+---
+# handlers file for postgrey
+- name: postgrey restart
+  service:
+    name: 'postgrey'
+    state: 'restarted'
+...

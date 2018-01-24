@@ -1,0 +1,10 @@
+---
+# defaults file for postgrey
+postgrey_packages:
+  - 'postgrey'
+postgrey_opts: '--inet=10023'
+# not implemented # postgrey_message: 'Your customized rejection message here'
+# postgrey_whitelist_clients:
+#   - 'mydomain.org'
+#   - '10.11.12.13'
+...

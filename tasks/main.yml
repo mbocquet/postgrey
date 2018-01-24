@@ -1,0 +1,25 @@
+---
+# tasks file for postgrey
+- name: "Package"
+  package:
+    name: '{{ item }}'
+  with_items:
+    - '{{ postgrey_packages }}'
+  tags:
+    - postgrey
+    - packages
+
+- name: "Options"
+  lineinfile:
+    path: '/etc/default/postgrey'
+    regexp: '^POSTGREY_OPTS='
+    line: 'POSTGREY_OPTS="{{ postgrey_opts }}"'
+  notify: postgrey restart
+  tags:
+    - postgrey
+    - options
+
+# - name: "whitelist clients"
+#   template:
+#     src: 
+...
