@@ -34,4 +34,4 @@ GPLv3
 
 ## Author Information
 
-http://www.sekoya.org
+<a href="http://www.sekoya.org" target="new">http://www.sekoya.org</a>
