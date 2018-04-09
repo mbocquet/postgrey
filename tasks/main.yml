@@ -19,7 +19,14 @@
     - postgrey
     - options
 
-# - name: "whitelist clients"
-#   template:
-#     src: 
+- name: "local whitelist clients"
+  template:
+    src: 'whitelist_clients.j2'
+    dest: '/etc/postgrey/whitelist_clients.local'
+    owner: root
+    group: root
+    mode: 0644
+  when:
+    - postgrey_whitelist_clients is defined
+  notify: postgrey restart
 ...
