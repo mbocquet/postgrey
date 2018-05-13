@@ -18,13 +18,13 @@ None.
 
     - hosts: servers
       roles:
-        - mbocquet.postgrey
+        - postgrey
 
 or
 
     - hosts: servers
       roles:
-        - { role: mbocquet.postgrey, x: 42 }
+        - { role: postgrey, x: 42 }
 
 if any variables comes in the future for this role.
 
