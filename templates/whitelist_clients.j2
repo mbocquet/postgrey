@@ -1,4 +1,4 @@
-# {{ ansible_managed }}
+# {{ ansible_managed }} role: postgrey, file: whitelist_clients.j2
 
 {%for client in postgrey_whitelist_clients %}{{ client }}
 {% endfor %}
