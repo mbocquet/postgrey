@@ -1,7 +1,9 @@
 galaxy_info:
   author: Mathias BOCQUET
-  description: Install and configure postgrey
+  description: Ansible role for postgrey, the postfix greylisting policy server.
   company: Sekoya.org
+
+  issue_tracker_url: https://git.sekoya.org/mb/postgrey/issues
 
   license: GPLv3
 
