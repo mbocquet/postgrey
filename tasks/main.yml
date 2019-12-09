@@ -1,15 +1,14 @@
 ---
 # tasks file for postgrey
-- name: "Package"
+- name: package
   package:
-    name: '{{ item }}'
-  with_items:
-    - '{{ postgrey_packages }}'
+    name: '{{ postgrey_packages }}'
+    force_apt_get: yes
   tags:
     - postgrey
-    - packages
+    - package
 
-- name: "Options"
+- name: options
   lineinfile:
     path: '/etc/default/postgrey'
     regexp: '^POSTGREY_OPTS='
