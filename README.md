@@ -8,11 +8,15 @@ A running postfix instance.
 
 ## Role Variables
 
-None.
+Many. See defaults/main.yml.
 
 ## Dependencies
 
-None.
+You should run a Postfix instance on the host to use this role.
+
+## Install this role as submodule of an existing GIT repository
+
+`git submodule add https://git.sekoya.org/mb/postgrey.git roles/postgrey`
 
 ## Example Playbook
 
