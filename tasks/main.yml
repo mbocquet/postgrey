@@ -3,7 +3,6 @@
 - name: package
   package:
     name: '{{ postgrey_packages }}'
-    force_apt_get: yes
   tags:
     - postgrey
     - package
@@ -14,6 +13,7 @@
     regexp: '^POSTGREY_OPTS='
     line: 'POSTGREY_OPTS="{{ postgrey_opts }}"'
   notify: postgrey restart
+  when: not ansible_check_mode
   tags:
     - postgrey
     - options
@@ -28,4 +28,6 @@
   when:
     - postgrey_whitelist_clients is defined
   notify: postgrey restart
-...
+  tags:
+    - postgrey
+    - whitelist
